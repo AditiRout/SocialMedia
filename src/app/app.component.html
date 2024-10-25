@@ -1,0 +1,29 @@
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <a class="navbar-brand" routerLink="/posts">My Social Media App</a>
+  <div class="collapse navbar-collapse">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/posts">Posts</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/create-post">Create Post</a>
+      </li>
+      <li>
+        {{ isLogged }}
+      </li>
+      <li class="nav-item" >
+        <a class="nav-link" *ngIf="!isLogged" routerLink="/login" >Login</a>
+      </li>
+      <li class="nav-item" *ngIf="isLogged">
+        <a class="nav-link" (click)="logoutFromApp()" *ngIf="isLogged"
+          >Logout</a
+        >
+      </li>
+    </ul>
+  </div>
+</nav>
+
+<div class="container mt-4">
+  <router-outlet></router-outlet>
+</div>

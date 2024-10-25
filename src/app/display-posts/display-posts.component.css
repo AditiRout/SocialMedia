@@ -1,0 +1,30 @@
+.container {
+  padding: 20px;
+}
+
+.d-flex {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px; /* Adjust the gap between cards */
+}
+
+.post-card {
+  flex: 1 1 calc(33.333% - 40px); /* 3 items per row with padding */
+  max-width: 33.333%; /* Ensure cards don’t stretch beyond this width */
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+@media (max-width: 768px) {
+  .post-card {
+    flex: 1 1 calc(50% - 40px); /* 2 items per row on smaller screens */
+    max-width: 50%;
+  }
+}
+
+@media (max-width: 576px) {
+  .post-card {
+    flex: 1 1 100%; /* Full width for small screens */
+    max-width: 100%;
+  }
+}

@@ -1,0 +1,32 @@
+<div class="container mt-5">
+  <div class="row justify-content-center">
+    <div class="col-md-8">
+      <mat-card class="mat-elevation-z8">
+        <!-- Post Title with Material Icons -->
+        <mat-card-header>
+          <div mat-card-avatar class="post-header-icon">
+            <mat-icon color="primary">article</mat-icon>
+          </div>
+          <mat-card-title>
+            <h3>{{ post?.title }}</h3>
+          </mat-card-title>
+        </mat-card-header>
+
+        <!-- Post Image -->
+        <img mat-card-image [src]="post?.image" alt="Post image" style="height: 400px; object-fit: cover;">
+
+        <!-- Post Content -->
+        <mat-card-content>
+          <p class="lead">{{ post?.body }}</p>
+        </mat-card-content>
+
+        <!-- Footer with Back Button -->
+        <mat-card-actions class="d-flex justify-content-center">
+          <button mat-raised-button color="primary" routerLink="/posts">
+            <mat-icon>arrow_back</mat-icon> Back to All Posts
+          </button>
+        </mat-card-actions>
+      </mat-card>
+    </div>
+  </div>
+</div>
